@@ -11,11 +11,37 @@
    else {
    	$affiche = $reponse['product']['nutrition_grade_fr'];
    }
+
+
+
+   if (!isset($reponse['product']['stores'])) {
+      $magasin = "";
+   }
+   elseif (empty($reponse['product']['stores'])) {
+      $magasin = "";
+   }
+   else {
+      $magasin = $reponse['product']['stores'];
+   }
+
+
+
+   if (!isset($reponse['product']['countries'])) {
+      $pays = "";
+   }
+   elseif (empty($reponse['product']['countries'])) {
+      $pays = "";
+   }
+   else {
+      $pays = $reponse['product']['countries'];
+   }
+
+
    
    
    
    
-     $nom = $reponse['product']['product_name'];
+   $nom = $reponse['product']['product_name'];
    $kilo = $reponse['product']['nutriments']['energy_value'];
    
    $c1 = $kilo * 60;
@@ -50,17 +76,19 @@
    </head>
    <body>
       <div class="how-it-works-container section-container" style="height: 100vh;">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-5 how-it-works-box" style="padding-left: 0px;right: 135px;bottom: 80px;">
+         <div>
+            <div class="row" style=" margin-bottom: 100px; ">
+               <div class="col-sm-5 how-it-works-box" style=" bottom: 80px; ">
                   <img src="assets/img/bouffe.png">
                </div>
                <div class="col-sm-6 col-sm-offset-1 how-it-works-box how-it-works-box-right wow fadeInUp">
                   <h3><?php echo $nom; ?></h3>
+                  <h3>Magasins de vente : <?php echo $magasin; ?></h3>
+                  <h3>Pays de vente : <?php echo $pays; ?></h3>
                   <?php 
                      echo "<img src='https://static.openfoodfacts.org/images/misc/nutriscore-".$affiche.".svg'>";
                      ?>
-                  <h4>Pour 100 grammes de ce produit :</h4>
+                     <h4>100 grammes de ce produit correspondant à <?php echo $kilo;?> kcal, il vous faudra pratiquer un effort physique de :</h4>
                   <table class="table">
                      <thead>
                         <tr>
@@ -112,8 +140,10 @@
                         </tr>
                      </tbody>
                   </table>
+                  <a class="btn btn-warning" onclick="retour()">Retour à la liste</a>
+                  <hr>
                   <div class="subscribe">
-                     <form class="form-inline" action="requete_multi_critere.php" method="post">
+                     <form class="form-inline" action="produits.php" method="post">
                         <div class="form-group">
                            <select class="form-control" style="width: 400px; height: 50px; margin-bottom: 20px;" name="categorie">
                               <option selected disabled>Rechercher une catégorie</option>
@@ -135,6 +165,11 @@
             </div>
          </div>
       </div>
+      <script>
+function retour() {
+    window.history.back();
+}
+</script>
       <script src="assets/js/jquery-1.11.1.min.js"></script>
       <script src="assets/bootstrap/js/bootstrap.min.js"></script>
       <script src="assets/js/jquery.backstretch.min.js"></script>
