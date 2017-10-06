@@ -29,24 +29,24 @@ $resultat = array(($reponse['products']));
             <div class="row">
             	<?php foreach ($resultat as $r) {
 	foreach ($r as $key => $value) {
-		echo " <div class='col-md-4 col-xs-12' style='max-height: 300px;'>
-      <div class='thumbnail' style='height: 285 !important;'>";
+		echo " <div class='col-md-4 col-xs-12' style='max-height: 300px; min-height: 300px; margin-bottom :50px;'>
+      <div class='thumbnail' style='max-height: 300px; min-height: 300px;'>";
 		if (!isset($value['image_front_thumb_url'])) {
 			echo "<img src='http://via.placeholder.com/500x300'";
 		}
 		else {
-			echo "<img src='".($value['image_front_thumb_url'])."'style='max-width: 87px;'>";
+			echo "<img src='".($value['image_front_thumb_url'])."'style='max-width: 87px !important;'>";
 		}
 		echo "<div class='caption'>";
 		echo "<h3 class='text-center'>".($value['product_name'])."</h3>";
-		if (!($value['nutriments']['energy_serving'])) {
+		if (empty($value['nutriments']['energy_value'])) {
 			echo "<p class='text-danger'>Aucune valeur nutritionnelle n'existe pour ce produit</p>";
 		}
-		elseif (!isset(($value['nutriments']['energy_serving']))) {
+		elseif (!isset(($value['nutriments']['energy_value']))) {
 			echo "<p class='text-danger'>Aucune valeur nutritionnelle n'existe pour ce produit</p>";
 		}
 		else {
-			echo "<p class='text-center'>".($value['nutriments']['energy_serving'])." Kcal</p>";
+			echo "<p class='text-center'>".($value['nutriments']['energy_value'])." Kcal pour 100 gr</p>";
 		}
 		echo "<br><a class='btn btn-warning' href='sport?id=".($value['code'])."'>Cliquer ici</a>";
 		echo "</div>";

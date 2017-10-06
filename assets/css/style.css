@@ -322,3 +322,8 @@ footer a:hover, footer a:focus { border-bottom: 1px dotted #ffb600; outline: 0; 
 .footer-menu ul { margin: 0; padding: 0; list-style: none; }
 .footer-menu li { display: inline; margin-left: 20px; }
 .footer-menu a, .footer-menu a:hover, .footer-menu a:focus { color: #888; border-color: #888; }
+
+.thumbnail {
+	max-height: 300px; 
+	min-height: 300px;"
+}
