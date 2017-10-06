@@ -43,6 +43,7 @@
    
    $nom = $reponse['product']['product_name'];
    $kilo = $reponse['product']['nutriments']['energy_value'];
+   $id = $reponse['product']['code'];
    
    $c1 = $kilo * 60;
    $course = $c1 / 950;
@@ -88,7 +89,14 @@
                   <?php 
                      echo "<img src='https://static.openfoodfacts.org/images/misc/nutriscore-".$affiche.".svg'>";
                      ?>
-                     <h4>100 grammes de ce produit correspondant à <?php echo $kilo;?> kcal, il vous faudra pratiquer un effort physique de :</h4>
+                     <br>
+                     <br>
+                     Plus d'informations nutritionnelles sur Open Food Facts : 
+                     <br>
+                     <a class="btn btn-success" href="https://fr.openfoodfacts.org/product/<?php echo $id;?>">Aller à la fiche produit</a>
+                     <br>
+                     <br>
+                     <h4>100 grammes de ce produit correspondant à <?php echo $kilo;?> kcal, il vous faudra pratiquer un effort physique de : (pour un poids moyen de 70kg)</h4>
                   <table class="table">
                      <thead>
                         <tr>

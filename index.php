@@ -22,7 +22,7 @@
             </div>
             <div class="row">
                <div class="col-sm-12 subscribe wow fadeInUp">
-                  <form class="form-inline" action="produits.php" method="post">
+                  <form class="form-inline" action="produits.php" method="post" style="margin-bottom: 50px;">
                      <div class="form-group">
                         <select class="form-control" style="width: 400px; height: 50px; margin-bottom: 20px;" name="categorie">
                            <option selected disabled>Rechercher une catégorie</option>
@@ -36,6 +36,13 @@
                            <option value="desserts">Desserts</option>
                            <option value="cafés">Cafés</option>
                         </select>
+                        <button type="submit" class="btn btn-block">Rechercher <i class="fa fa-search"></i></button>
+                     </div>
+                  </form>
+                  <p>OU RECHERCHER PAR MOTS CLÉS</p>
+                  <form class="form-inline" action="recherche.php" method="post" style="margin-top: 50px;">
+                     <div class="form-group">
+                        <input type="text" style="width: 400px; height: 50px; margin-bottom: 20px;" name="recherche" placeholder="Recherche par mot clé">
                         <button type="submit" class="btn btn-block">Rechercher <i class="fa fa-search"></i></button>
                      </div>
                   </form>
