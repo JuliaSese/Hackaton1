@@ -22,7 +22,7 @@
             </div>
             <div class="row">
                <div class="col-sm-12 subscribe wow fadeInUp">
-                  <form class="form-inline" action="requete_multi_critere.php" method="post">
+                  <form class="form-inline" action="produits.php" method="post">
                      <div class="form-group">
                         <select class="form-control" style="width: 400px; height: 50px; margin-bottom: 20px;" name="categorie">
                            <option selected disabled>Rechercher une catégorie</option>
