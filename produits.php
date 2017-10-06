@@ -49,7 +49,7 @@
                      else {
                         echo "<p class='text-center'>".($value['nutriments']['energy_value'])." Kcal pour 100 gr</p>";
                      }
-                     echo "<br><a class='btn btn-warning' href='sport?id=".($value['code'])."'>Cliquer ici</a>";
+                     echo "<br><a class='btn btn-warning' href='sport.php?id=".($value['code'])."'>Cliquer ici</a>";
                      echo "</div>";
                      echo "</div>";
                      echo "</div>";
