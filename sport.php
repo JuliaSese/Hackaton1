@@ -93,7 +93,7 @@
                      <br>
                      Plus d'informations nutritionnelles sur Open Food Facts : 
                      <br>
-                     <a class="btn btn-success" href="https://fr.openfoodfacts.org/product/<?php echo $id;?>">Aller à la fiche produit</a>
+                     <a class="btn btn-success" href="https://fr.openfoodfacts.org/product/<?php echo $id;?>"" target="_blank">Aller à la fiche produit</a>
                      <br>
                      <br>
                      <h4>100 grammes de ce produit correspondant à <?php echo $kilo;?> kcal, il vous faudra pratiquer un effort physique de : (pour un poids moyen de 70kg)</h4>
@@ -108,42 +108,42 @@
                      <tbody>
                         <tr>
                            <td>Course à pied (13km/h)</td>
-                           <td><?php echo number_format($course,2);?> minutes</td>
+                           <td><?php echo number_format($course,0);?> minutes</td>
                            <td><?php echo number_format($course_h,2);?> heures</td>
                         </tr>
                         <tr>
                            <td>Natation</td>
-                           <td><?php echo number_format($natation,2);?> minutes</td>
+                           <td><?php echo number_format($natation,0);?> minutes</td>
                            <td><?php echo number_format($natation_h,2);?> heures</td>
                         </tr>
                         <tr>
                            <td>Cyclisme</td>
-                           <td><?php echo number_format($cyclisme,2);?> minutes</td>
+                           <td><?php echo number_format($cyclisme,0);?> minutes</td>
                            <td><?php echo number_format($cyclisme_h,2);?> heures</td>
                         </tr>
                         <tr>
                            <td>Basket</td>
-                           <td><?php echo number_format($basket,2);?> minutes</td>
+                           <td><?php echo number_format($basket,0);?> minutes</td>
                            <td><?php echo number_format($basket_h,2);?> heures</td>
                         </tr>
                         <tr>
                            <td>Danse</td>
-                           <td><?php echo number_format($danse,2);?> minutes</td>
+                           <td><?php echo number_format($danse,0);?> minutes</td>
                            <td><?php echo number_format($danse_h,2);?> heures</td>
                         </tr>
                         <tr>
                            <td>Tennis de table</td>
-                           <td><?php echo number_format($tennis,2);?> minutes</td>
+                           <td><?php echo number_format($tennis,0);?> minutes</td>
                            <td><?php echo number_format($tennis_h,2);?> heures</td>
                         </tr>
                         <tr>
                            <td>Promenade à pied</td>
-                           <td><?php echo number_format($promenade,2);?> minutes</td>
+                           <td><?php echo number_format($promenade,0);?> minutes</td>
                            <td><?php echo number_format($promenade_h,2);?> heures</td>
                         </tr>
                         <tr>
                            <td>Sexe</td>
-                           <td><?php echo number_format($sexe,2);?> minutes</td>
+                           <td><?php echo number_format($sexe,0);?> minutes</td>
                            <td><?php echo number_format($sexe_h,2);?> heures</td>
                         </tr>
                      </tbody>
